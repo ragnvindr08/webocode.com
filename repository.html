@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #131212;
+            text-align: center;
+        }
+
+        .coming-soon-container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        h1 {
+            color: #f6eded;
+        }
+
+        p {
+            color: #f7f4f4;
+        }
+
+        .download-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #e05e12;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 2px;
+        }
+
+        .download-button:hover {
+            background-color: #a05c45;
+
+        }
+        .download-button{
+            background-color: #a05c45;
+            animation-name: colors;
+            animation-iteration-count: infinite;
+            animation-duration: 3s;
+            animation-delay: 2s;
+        }
+        @keyframes colors{
+            50%{background-color: red;}
+            75%{background-color: #f14a03;}
+            100%{background-color: #89320d;}
+
+        }
+
+
+        .coming-soon-container img{
+            margin-bottom: -100px;
+            margin-top: -250px;
+        }
+    </style>
+    <title>Download</title>
+</head>
+<body>
+    <div class="coming-soon-container">
+        <img src="title.png">
+        <h1>WeboCode 1.0 Repository</h1>
+        <p>Visit the our repository on Github <a style="color: #e05e12;" href="https://github.com/ragnvindr08/webocode">Click Here</a></p>
+        <p>We are working hard to bring you something awesome!</p>
+        <a href="https://codeload.github.com/ragnvindr08/webocode/zip/refs/heads/main" class="download-button"> Auto Download</a>
+    </div>
+
+</body>
+</html>

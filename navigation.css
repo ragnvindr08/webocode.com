@@ -1,0 +1,145 @@
+body{
+    background-repeat: no-repeat;
+    background-position: auto;
+    background-color: rgb(24, 23, 23);
+    background-size: cover;
+    background-image: url(https://www.bhmpics.com/downloads/codes-Wallpapers/28.code-syntax-dark-minimal-4k-mr.jpg);
+    padding-left:10px;
+    padding-right:10px;
+}
+
+.content .animate-charcter
+{
+   text-transform: uppercase;
+  background-image: linear-gradient(
+    -225deg,
+    #eaeaf5 0%,
+    #f0eaf6 29%,
+    #f20956 67%,
+    #403f38 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 10s linear infinite;
+  display: inline-block;
+      font-size: 50px;
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+
+.h1title{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+    color: rgba(231, 65, 14, 0.76);
+    text-shadow: 10cm 10cm 10cm;
+    display: flex;
+    transition: 2s;
+
+
+}
+
+.h1title .h1{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: rgb(228, 220, 212);
+    font-size: 50px;
+
+
+
+
+}
+
+.h1title h1{
+    font-family: s;
+    font-size: 40px;
+    text-shadow: 0px 0px 0px;
+}
+
+
+.head1{
+background-color: rgb(36, 34, 34);
+padding: 10px;
+text-align: center;
+border-radius: 6px;
+box-shadow: 5px 5px 5px;
+transition: 0.8s;
+}
+
+.head1:hover{
+    background-color: rgb(48, 46, 44);
+    transition: 0.8s;
+    }
+
+.head1 .ul1 a{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin: 50px;
+    text-decoration: none;
+    color: rgb(247, 245, 243);
+    font-size: 15;
+    transition: 0.3s;
+}
+.head1 a:hover{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin: 50px;
+    text-decoration: none;
+    color: rgb(226, 118, 10);
+    font-size: 15;
+    transition: 0.3s;
+}
+
+
+.img1{
+align-items: center;
+}
+
+.img1 img{
+    margin: 30px;
+    width: 1000px;
+}
+
+@media screen and (max-width: 900px)  {
+    body{
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: rgb(56, 53, 53);
+        background-size: cover;
+        padding: 20px;
+    }
+
+    .head1 .ul1 a{
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        margin: 50px;
+        text-decoration: none;
+        color: rgb(243, 238, 231);
+        font-size: 20px;
+        display: flex;
+    }
+
+    .head1{
+        background-image: url(https://www.bhmpics.com/downloads/codes-Wallpapers/28.code-syntax-dark-minimal-4k-mr.jpg);
+        background-size: cover;
+        background-color: rgb(36, 34, 34);
+        padding: 15px;
+        text-align: center;
+        border-radius: 6px;
+        box-shadow: 5px 5px 5px;
+        transition: 0.8s;
+        }
+        .img1 img{
+          display: none;
+        }
+}
+
+footer{
+    margin-top: 700px;
+        text-align: center;
+}

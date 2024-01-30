@@ -1,0 +1,183 @@
+body {
+  background-color: rgb(38, 36, 36);
+  background-image: url(main1.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  width: auto;
+  margin: 20px;
+  padding: 0;
+}
+
+#navbar {
+  background-color: rgba(42, 39, 39, 0.254);
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#title {
+  display: flex;
+  align-items: center;
+}
+
+#imageContainer {
+  margin: 10px;
+}
+#imageContainer img {
+  height: 37px;
+}
+
+#title h1 {
+  padding: 0;
+  margin-left: 10px;
+  margin-bottom: 20px;
+  position: absolute;
+  left: 60px;
+  top: 5px;
+  color: white;
+  font-size: 20px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  margin-right: 10px;
+}
+#title h2 {
+  margin-left: 10px;
+  margin-top: 25px;
+  position: absolute;
+  left: 60px;
+  top: 15px;
+  align-items: center;
+  color: lightgray;
+  font-size: 15px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-weight: 20;
+}
+.navButtonsContainer {
+  display: flex;
+}
+.navButton {
+  padding: 10px;
+  margin: 2px;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: bold;
+}
+/* To stick the last three buttons to the right end */
+.navButtonsContainer {
+  position: absolute;
+  right: 10px;
+}
+
+#editorsSection {
+  border: 1px solid rgba(33, 33, 35, 0.37);
+  border-radius: 5px 5px 5px 5px;
+  box-shadow: 2px 2px 2px 2px;
+  background-color: rgba(23, 23, 24, 0.209);
+  height: 45vh;
+  display: flex;
+}
+
+.codeEditor {
+  margin: 10px;
+  width: 32%;
+  border: solid 1px rgba(33, 34, 35, 0.935);
+  background-color: rgba(27, 27, 29, 0.859);
+  display: flex;
+  flex-direction: column;
+}
+.codeEditorNavbar {
+  background-color: rgba(105, 106, 109, 0.467);
+  height: 55px;
+  display: flex;
+  align-items: center;
+}
+.langLogo img {
+  height: 30px;
+  margin: 10px;
+}
+.langName {
+  color: white;
+  margin-left: 5px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
+}
+
+.codeArea {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+}
+.codeArea textarea {
+  /* resize: none; */
+  background: rgba(40, 39, 39, 0.765);
+  /* font-family: "Courier New", Courier, monospace; */
+  color: rgb(58, 163, 16);
+  width: 97%;
+  height: 97%;
+  resize: none;
+  box-sizing: border-box;
+
+}
+
+.codeEditorButtons {
+  margin-left: auto;
+}
+.codeEditorButtons button {
+  padding: 5px;
+  border-radius: 10px;
+  margin-right: 10px;
+}
+
+#resultSection {
+  width: 100%;
+  height: 100%;
+}
+
+#resultContainer {
+  background: rgba(31, 30, 30, 0.324);
+  padding: 10px;
+  border-radius: 5px 5px 5px 5px;
+
+  /* margin: 3px; */
+}
+
+#viewer {
+  background-color: rgb(51, 48, 48);
+  width: 100%;
+  height: 100vh;
+}
+#footer {
+  position: fixed;
+  width: 100%;
+  background-color: rgb(29, 30, 34);
+  bottom: 0;
+  padding: 5px;
+}
+#footer button {
+  background-color: rgb(46, 47, 50);
+  color: rgb(55, 48, 48);
+  margin-left: 2px;
+}
+#footer span {
+  /* //align in center */
+  margin-left: 70px;
+  color: rgb(60, 55, 55);
+  font-family: monospace;
+}
+
+#resizer {
+  display: flex;
+  width: 100%;
+  height: 8px;
+  background-color: rgb(49, 50, 54);
+  cursor: row-resize;
+  justify-content: center;
+}
+
+#resizer div {
+  display: flex;
+  align-items: end;
+  color: rgb(241, 235, 235);
+  font-size: large;
+  font-weight: bold;
+}

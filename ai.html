@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<!-- Coding By CodingNepal - www.codingnepalweb.com -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Webo Chat AI</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Fonts Link For Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,1,0" />
+    <script src="script.js" defer></script>
+  </head>
+  <br>
+  <div class="head1">
+    <ul class="ul1">
+        <a href="index.html">Home</a>
+    </ul>
+</div>
+  <body>
+    <div class="text-container">
+      <h1>Webocode.AI</h1>
+    </div>
+
+    <button class="chatbot-toggler">
+      <span class="material-symbols-rounded">mode_comment</span>
+      <span class="material-symbols-outlined">close</span>
+    </button>
+    <div class="chatbot">
+      <header>
+        <div class="text-container1">
+          <h1>Webocode.AI</h1>
+        </div>
+        <span class="close-btn material-symbols-outlined">close</span>
+      </header>
+      <ul class="chatbox">
+          <p style="color:white;">Type available command:<br> [Webocode] [Information] [Hi] [Hello] </p><br>
+        <li class="chat incoming">
+            
+          <span class="material-symbols-outlined">smart_toy</span>
+          <p>Welcome to Webo AI.<br>This AI is still in the process of<br>development and may not be fully complete, thank you.</p>
+          
+        </li>
+      </ul>
+      <div class="chat-input">
+        <textarea placeholder="Enter a message..." spellcheck="false" required></textarea>
+        <span id="send-btn" class="material-symbols-rounded">send</span>
+      </div>
+    </div>
+
+
+    <script>
+      const chatbotToggler = document.querySelector(".chatbot-toggler");
+      const closeBtn = document.querySelector(".close-btn");
+      const chatbox = document.querySelector(".chatbox");
+      const chatInput = document.querySelector(".chat-input textarea");
+      const sendChatBtn = document.querySelector(".chat-input span");
+      let userMessage = null; // Variable to store user's message
+      const API_KEY = "PASTE-YOUR-API-KEY"; // Paste your API key here
+      const inputInitHeight = chatInput.scrollHeight;
+
+      // Array of random response messages
+      const randomResponseMessages = [
+          "I'm not sure I understand. Can you please provide more details?",
+          "Sorry, I couldn't catch that. Could you rephrase your message?",
+          "Hmm, let me think about that for a moment...",
+          "I'm still learning! Can you ask me something else?",
+          // Add more random messages as needed
+
+      ];
+
+      const createChatLi = (message, className) => {
+          // Create a chat <li> element with passed message and className
+          const chatLi = document.createElement("li");
+          chatLi.classList.add("chat", `${className}`);
+          let chatContent = className === "outgoing" ? `<p></p>` : `<span class="material-symbols-outlined">smart_toy</span><p></p>`;
+          chatLi.innerHTML = chatContent;
+          chatLi.querySelector("p").textContent = message;
+          return chatLi; // return chat <li> element
+      }
+
+      const generateResponse = (chatElement) => {
+          const API_URL = "https://api.openai.com/v1/chat/completions";
+          const messageElement = chatElement.querySelector("p");
+
+          // Select a random message from the array
+          const randomIndex = Math.floor(Math.random() * randomResponseMessages.length);
+          const randomMessage = randomResponseMessages[randomIndex];
+
+          // Set the random message as the paragraph text
+          messageElement.textContent = randomMessage;
+
+          // The rest of your code for API request (if needed)...
+      }
+
+      const handleChat = () => {
+    userMessage = chatInput.value.trim().toLowerCase(); // Get user entered message and convert to lowercase
+    if (!userMessage) return;
+
+    // Clear the input textarea and set its height to default
+    chatInput.value = "";
+    chatInput.style.height = `${inputInitHeight}px`;
+
+    // Append the user's message to the chatbox
+    chatbox.appendChild(createChatLi(userMessage, "outgoing"));
+    chatbox.scrollTo(0, chatbox.scrollHeight);
+
+    setTimeout(() => {
+        // Display "Thinking..." message while waiting for the response
+        const incomingChatLi = createChatLi("Thinking...", "incoming" , "generating");
+        chatbox.appendChild(incomingChatLi);
+        chatbox.scrollTo(0, chatbox.scrollHeight);
+
+        // Check if user typed "hi" and respond with a random greeting
+        if (userMessage === "hi") {
+            setTimeout(() => {
+                incomingChatLi.querySelector("p").textContent = getRandomHiResponse();
+                chatbox.scrollTo(0, chatbox.scrollHeight);
+            }, 600);
+          } else if (userMessage === "hello") {
+            setTimeout(() => {
+            incomingChatLi.querySelector("p").textContent = getRandomHiResponse1();
+            chatbox.scrollTo(0, chatbox.scrollHeight);
+        }, 600);
+          } else if (userMessage === "webocode") {
+            setTimeout(() => {
+            incomingChatLi.querySelector("p").textContent = getRandomHiResponse2();
+            chatbox.scrollTo(0, chatbox.scrollHeight);
+        }, 600);
+      } else if (userMessage === "information") {
+            setTimeout(() => {
+            incomingChatLi.querySelector("p").textContent = getRandomHiResponse3();
+            chatbox.scrollTo(0, chatbox.scrollHeight);
+        }, 600);
+        } else {
+            // If not "hi," generate a general random response
+            setTimeout(() => {
+                incomingChatLi.querySelector("p").textContent = getRandomResponse();
+                chatbox.scrollTo(0, chatbox.scrollHeight);
+            }, 600);
+        }
+
+
+    }, 600);
+  }
+
+
+
+// Function to get a random response from the array
+function getRandomResponse() {
+    const randomIndex = Math.floor(Math.random() * randomResponseMessages.length);
+    return randomResponseMessages[randomIndex];
+}
+
+// Function to get a random "hi" response from the array
+function getRandomHiResponse(speak = false) {
+    const hiResponses = ["Hello!", "Hi there!", "Greetings!", "Hey!"];
+    const randomIndex = Math.floor(Math.random() * hiResponses.length);
+    const response = hiResponses[randomIndex];
+
+    // If the 'speak' parameter is true, speak the response
+    if (speak) {
+        speakResponse(response);
+    }
+
+    return response;
+}
+
+// Function to speak the response using Web Speech API
+function speakResponse(text) {
+    const synth = window.speechSynthesis;
+    const voices = synth.getVoices();
+
+    const utterance = new SpeechSynthesisUtterance(text);
+    utterance.voice = voices[0]; // You can choose a different voice by changing the index
+
+    // Speak the text
+    synth.speak(utterance);
+}
+function getRandomHiResponse1() {
+    const hiResponses = ["Hi there!", "Greetings!", "Hey!"];
+    const randomIndex = Math.floor(Math.random() * hiResponses.length); 
+    return hiResponses[randomIndex];
+  }
+function getRandomHiResponse2() {
+    const hiResponses = ["🚀 Exciting News: Webocode Release! 🚀 We are thrilled to announce the much-anticipated release of Webocode, our latest website! 🌐✨ After months of dedication and hard work, we are excited to unveil a platform that reflects our commitment to innovation and user satisfaction. Webocode brings a fresh, user-friendly experience, combining sleek design with cutting-edge functionalities. Explore our website to discover a seamless blend of creativity and technology. Dive into a world of user-friendly interfaces, captivating content, and smooth navigation. Whether you're a visitor or a long-time supporter, we've designed Webocode with you in mind. Join us on this journey as we introduce a new chapter in our online presence. Your feedback is invaluable, and we can't wait to hear what you think. Thank you for being part of the Webocode community. Let's explore, create, and connect together! "];
+    const randomIndex = Math.floor(Math.random() * hiResponses.length);
+    return hiResponses[randomIndex];
+}
+function getRandomHiResponse3() {
+    const hiResponses = ["🚀 Exciting Update: Webocode is Now Live! 🌐✨ We're thrilled to announce the release of Webocode, our latest website! After months of hard work, we present a platform that combines sleek design with cutting-edge functionalities. Explore user-friendly interfaces, captivating content, and smooth navigation. Whether you're a visitor or a long-time supporter, Webocode is designed with you in mind. Join us on this journey and be part of the Webocode community! Your feedback is essential as we explore, create, and connect together!"];
+    const randomIndex = Math.floor(Math.random() * hiResponses.length);
+    return hiResponses[randomIndex];
+  }
+      chatInput.addEventListener("input", () => {
+          // Adjust the height of the input textarea based on its content
+          chatInput.style.height = `${inputInitHeight}px`;
+          chatInput.style.height = `${chatInput.scrollHeight}px`;
+      });
+
+      chatInput.addEventListener("keydown", (e) => {
+          // If Enter key is pressed without Shift key and the window
+          // width is greater than 800px, handle the chat
+          if (e.key === "Enter" && !e.shiftKey && window.innerWidth > 800) {
+              e.preventDefault();
+              handleChat();
+          }
+      });
+
+      sendChatBtn.addEventListener("click", handleChat);
+      closeBtn.addEventListener("click", () => document.body.classList.remove("show-chatbot"));
+      chatbotToggler.addEventListener("click", () => document.body.classList.toggle("show-chatbot"));
+
+
+  </script>
+  </body>
+
+  <style>/* Import Google font - Poppins */
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+    body {
+        background: #0c0c0c;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    .text-container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -140px;
+}
+
+.text-container h1{
+
+  margin: 0;
+  font-size: 100px;
+  color: rgba(255, 255, 255, 0.102);
+  background-image: url("https://cdn.wallpapersafari.com/17/47/cFbQ3W.jpg");
+  background-repeat: repeat;
+  -webkit-background-clip:text;
+  animation: animate 10s ease-in-out infinite;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+  @keyframes animate {
+    0%, 100% {
+      background-position: left top;
+    }
+    25%{
+      background-position: right bottom;
+     }
+    50% {
+      background-position: left bottom;
+    }
+    75% {
+      background-position: right top;
+    }
+}
+.text-container1 h1{
+
+margin: 0;
+font-size: 30px;
+color: rgba(53, 50, 50, 0.244);
+background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNQz5ymgB0fYGMWw0mE-q8gLuTN55a6emdQA&usqp=CAU");
+background-repeat: repeat;
+-webkit-background-clip:text;
+animation: animate 10s ease-in-out infinite;
+text-align: center;
+text-transform: uppercase;
+font-weight: 500;
+}
+
+@keyframes animate {
+  0%, 100% {
+    background-position: left top;
+  }
+  25%{
+    background-position: right bottom;
+   }
+  50% {
+    background-position: left bottom;
+  }
+  75% {
+    background-position: right top;
+  }
+}
+
+    .chatbot-toggler {
+      position: fixed;
+      bottom: 30px;
+      right: 35px;
+      outline: none;
+      border: none;
+      height: 50px;
+      width: 50px;
+      display: flex;
+      cursor: pointer;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background: #313032;
+      transition: all 0.2s ease;
+    }
+    body.show-chatbot .chatbot-toggler {
+      transform: rotate(90deg);
+    }
+    .chatbot-toggler span {
+      color: #fff;
+      position: absolute;
+    }
+    .chatbot-toggler span:last-child,
+    body.show-chatbot .chatbot-toggler span:first-child  {
+      opacity: 0;
+    }
+    body.show-chatbot .chatbot-toggler span:last-child {
+      opacity: 1;
+    }
+    .chatbot {
+      position: fixed;
+      right: 35px;
+      bottom: 90px;
+      width: 420px;
+      background: #0c0c0c;
+      border-radius: 15px;
+      overflow: hidden;
+      opacity: 0;
+      pointer-events: none;
+      transform: scale(0.5);
+      transform-origin: bottom right;
+      box-shadow: 0 0 128px 0 rgba(0,0,0,0.1),
+                  0 32px 64px -48px rgba(0,0,0,0.5);
+      transition: all 0.1s ease;
+    }
+    body.show-chatbot .chatbot {
+      opacity: 1;
+      pointer-events: auto;
+      transform: scale(1);
+    }
+    .chatbot header {
+      padding: 16px 0;
+      position: relative;
+      text-align: center;
+      color: #f3f1f1;
+      background: #323133;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    .chatbot header span {
+      position: absolute;
+      right: 15px;
+      top: 50%;
+      display: none;
+      cursor: pointer;
+      transform: translateY(-50%);
+    }
+
+
+.h1title{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+    color: rgba(231, 65, 14, 0.76);
+    text-shadow: 10cm 10cm 10cm;
+    display: flex;
+    transition: 2s;
+
+
+}
+    .chatbot .chatbox {
+      overflow-y: auto;
+      height: 510px;
+      padding: 30px 20px 100px;
+    }
+    .chatbot :where(.chatbox, textarea)::-webkit-scrollbar {
+      width: 6px;
+    }
+    .chatbot :where(.chatbox, textarea)::-webkit-scrollbar-track {
+      background: #fff;
+      border-radius: 25px;
+    }
+    .chatbot :where(.chatbox, textarea)::-webkit-scrollbar-thumb {
+      background: #ccc;
+      border-radius: 25px;
+    }
+    .chatbox .chat {
+      display: flex;
+      list-style: none;
+    }
+    .chatbox .outgoing {
+      margin: 20px 0;
+      justify-content: flex-end;
+    }
+    .chatbox .incoming span {
+      width: 32px;
+      height: 32px;
+      color: #fff;
+      cursor: default;
+      text-align: center;
+      line-height: 32px;
+      align-self: flex-end;
+      background: #2b2a2c;
+      border-radius: 4px;
+      margin: 0 10px 7px 0;
+    }
+    .chatbox .chat p {
+      white-space: pre-wrap;
+      padding: 12px 16px;
+      border-radius: 10px 10px 0 10px;
+      max-width: 75%;
+      color: #fff;
+      font-size: 0.95rem;
+      background: #3a393c;
+    }
+    .chatbox .incoming p {
+      border-radius: 10px 10px 10px 0;
+    }
+    .chatbox .chat p.error {
+      color: #721c24;
+      background: #f8d7da;
+    }
+    .chatbox .incoming p {
+      color: #000;
+      background: #f2f2f2;
+    }
+    .chatbot .chat-input {
+      display: flex;
+      gap: 5px;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      background: #fff;
+      padding: 3px 20px;
+      border-top: 1px solid #ddd;
+    }
+    .chat-input textarea {
+      height: 55px;
+      width: 100%;
+      border: none;
+      outline: none;
+      resize: none;
+      max-height: 180px;
+      padding: 15px 15px 15px 0;
+      font-size: 0.95rem;
+    }
+    .chat-input span {
+      align-self: flex-end;
+      color: #2e2d32;
+      cursor: pointer;
+      height: 55px;
+      display: flex;
+      align-items: center;
+      visibility: hidden;
+      font-size: 1.35rem;
+    }
+    .chat-input textarea:valid ~ span {
+      visibility: visible;
+    }
+
+    .head1{
+background-color: rgba(42, 39, 39, 0.685);
+padding: 10px;
+text-align: center;
+border-radius: 6px;
+box-shadow: 5px 5px 5px;
+transition: 0.8s;
+
+}
+
+.head1:hover{
+    background-color: rgb(48, 46, 44);
+    transition: 0.8s;
+
+    }
+
+.head1 .ul1 a{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin: 50px;
+    text-decoration: none;
+    color: rgb(247, 245, 243);
+    font-size: 15;
+    transition: 0.3s;
+}
+.head1 a:hover{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin: 50px;
+    text-decoration: none;
+    color: rgba(224, 14, 164, 0.193);
+    font-size: 15;
+    transition: 0.3s;
+}
+
+    @media (max-width: 490px) {
+      .chatbot-toggler {
+        right: 20px;
+        bottom: 20px;
+      }
+      .chatbot {
+        right: 0;
+        bottom: 0;
+        height: 100%;
+        border-radius: 0;
+        width: 100%;
+      }
+      .chatbot .chatbox {
+        height: 90%;
+        padding: 25px 15px 100px;
+      }
+      .chatbot .chat-input {
+        padding: 5px 15px;
+      }
+      .chatbot header span {
+        display: block;
+      }
+    }</style>
+</html>

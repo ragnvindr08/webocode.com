@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shorcut icon" href="title.png"/>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden; /* Hide overflow to prevent scrollbar */
+
+        }
+        p {
+            opacity: 0; /* Set initial opacity to 0 */
+            animation: fadeIn 2s ease-out forwards; /* Apply fadeIn animation */
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px); /* Move the text up slightly */
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+    </style>
+    <title>WeboInfo</title>
+</head>
+<body>
+    <img src="title.png">
+    <p>This type of content is designed to help individuals learn programming languages, frameworks, libraries, or specific coding techniques. It typically includes code snippets, explanations, and hands-on examples to assist learners in understanding and applying the concepts being taught.</p>
+</body>
+</html>

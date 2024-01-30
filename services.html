@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shorcut icon" href="title.png"/>
+    <style>
+        body {
+            background-color:white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden; /* Hide overflow to prevent scrollbar */
+
+        }
+        p {
+            margin-left:10px;
+            opacity: 0; /* Set initial opacity to 0 */
+            animation: fadeIn 2s ease-out forwards; /* Apply fadeIn animation */
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px); /* Move the text up slightly */
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+    </style>
+    <title>About us</title>
+</head>
+<body>
+    <img src="title.png">
+    <h3>Our Services </h3>
+    <p>
+At Webocode, we take pride in offering a diverse range of services designed to cater to your digital needs. Our dedicated team has meticulously crafted solutions that align with the latest industry trends and technological advancements.<br>
+<br>
+Programming Tutorials:
+Master the art of coding with our comprehensive programming tutorials. Whether you're a beginner or an experienced developer, our tutorials cover a wide range of programming languages and concepts. Dive into engaging, step-by-step lessons crafted to enhance your coding skills and keep you updated on the latest technologies.</p>
+</body>
+</html>

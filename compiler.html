@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Webo Compiler</title>
+    <link href="compiler.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <div id="navbar">
+      <div id="title">
+        <div id="imageContainer">
+          <img src="title.png"/>
+        </div>
+        <h1>WeboCompiler</h1>
+        <h2>Html/Css/Javascript</h2>
+        <!--/**<div class="navButtonsContainer">
+          <button class="navButton" style="background-color: rgba(243, 236, 236, 0.285)">
+            Setting
+          </button>
+          <button class="navButton" style="background-color: rgba(205, 117, 22, 0.312)">
+            Save
+          </button>
+          <button class="navButton" style="background-color: rgba(228, 65, 11, 0.3)">
+            Login
+          </button>
+        </div>**/-->
+      </div>
+    </div>
+    <!-- Code Editor Section -->
+    <div id="editorsSection">
+      <div style="background-color: rgb(202, 95, 33);" class="codeEditor">
+        <div class="codeEditorNavbar">
+          <div class="langLogo"><img src="https://www.svgrepo.com/show/452228/html-5.svg" /></div>
+          <p class="langName">HTML</p>
+          <div class="codeEditorButtons">
+
+          </div>
+        </div>
+        <div class="codeArea">
+          <textarea
+            name=""
+            id="htmlCode"
+            cols="1"
+            rows="1"
+            placeholder="code HTML Here"
+            oninput="update(0)"
+            onkeydown="if(event.keyCode===9){var v=this.value,s=this.selectionStart,e=this.selectionEnd;this.value=v.substring(0, s)+'\t'+v.substring(e);this.selectionStart=this.selectionEnd=s+1;return false;}if(event.keyCode==8){update(1);}"
+          ></textarea>
+        </div>
+      </div>
+      <div style="background-color: blue;" class="codeEditor">
+        <div class="codeEditorNavbar">
+          <div class="langLogo"><img src="https://www.svgrepo.com/show/349330/css3.svg" /></div>
+          <p class="langName">CSS</p>
+          <div class="codeEditorButtons">
+
+          </div>
+        </div>
+        <div class="codeArea">
+          <textarea
+            name=""
+            id="cssCode"
+            cols="1"
+            rows="1"
+            placeholder="code CSS Here"
+            oninput="update(0)"
+            onkeydown="if(event.keyCode===9){var v=this.value,s=this.selectionStart,e=this.selectionEnd;this.value=v.substring(0, s)+'\t'+v.substring(e);this.selectionStart=this.selectionEnd=s+1;return false;}if(event.keyCode==8){update(1);}"
+          ></textarea>
+        </div>
+      </div>
+      <div style="background-color: rgb(218, 218, 23);" class="codeEditor">
+        <div class="codeEditorNavbar">
+          <div class="langLogo"><img src="https://www.svgrepo.com/show/349419/javascript.svg" /></div>
+          <p class="langName">JS</p>
+          <div class="codeEditorButtons">
+
+          </div>
+        </div>
+        <div class="codeArea">
+          <textarea
+            name=""
+            id="jsCode"
+            cols="1"
+            rows="1"
+            placeholder="code Javascript Here"
+            oninput="update(0)"
+            onkeydown="if(event.keyCode===9){var v=this.value,s=this.selectionStart,e=this.selectionEnd;this.value=v.substring(0, s)+'\t'+v.substring(e);this.selectionStart=this.selectionEnd=s+1;return false;}if(event.keyCode==8){update(1);}"
+          ></textarea>
+        </div>
+      </div>
+    </div>
+    <!-- Resizer button here -->
+    <div id="resizer"><div>...</div></div>
+    <!-- Result Section -->
+    <div id="resultSection">
+      <div id="resultContainer">
+        <!-- Results will be shown here -->
+        <iframe id="viewer" ></iframe>
+      </div>
+    </div>
+    <!-- Footer Section -->
+    <div id="footer">
+      <button class="footerButtons">console</button>
+      <button class="footerButtons">Assets</button>
+      <button class="footerButtons">Shortcuts</button>
+      <span>WeboCode</span>
+    </div>
+  </body>
+
+ <script defer src="./handleResize.js">//this code handles editor/result resize functionality </script>
+ <script defer src="./renderEngine.js">//this code renders the html css and js in the iframe </script>
+</body>
+</html>
