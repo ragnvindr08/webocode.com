@@ -1,4 +1,4 @@
-[I'm an inline-style link](https://ragnvindr08.github.io/webocode.com/)
+[webocode website link](https://ragnvindr08.github.io/webocode.com/)
 <html>
 </html>
 <body>
