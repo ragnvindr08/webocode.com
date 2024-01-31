@@ -9,9 +9,10 @@
 
                 // Replace this array with your actual user accounts stored in a secure manner
                 const userAccounts = [
-                    { username: "johnstevencaspe", password: "123" },
-                    { username: "caspe123", password: "123" },
-                    { username: "caspe12345", password: "1234" },
+                    { username: "johnstevencaspe@github.com", password: "caspe" },
+                    { username: "mamansagjames@github.com", password: "james" },
+                    { username: "brixlecaros@github.com", password: "lecaros" },
+                    { username: "lordjustin@github.com", password: "justin" },
                     // Add more accounts as needed
                 ];
 
