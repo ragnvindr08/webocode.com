@@ -7,9 +7,6 @@
   font-family: 'Fira Sans', sans-serif;
     }
 
-
-
-
 body {
   background-color: #1e1c1c;
   margin: 15px;
@@ -19,8 +16,6 @@ body {
     opacity: 0;
     transition: opacity 1s ease;
   }
-
-
 
   .overlay {
         position: fixed;
