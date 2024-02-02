@@ -7,6 +7,9 @@
   font-family: 'Fira Sans', sans-serif;
     }
 
+
+
+
 body {
   background-color: #1e1c1c;
   margin: 15px;
@@ -16,6 +19,38 @@ body {
     opacity: 0;
     transition: opacity 1s ease;
   }
+
+..images-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+    margin-right: 20px;
+}
+
+.logo1-image {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px;
+    height: auto;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 1); /* Initial box shadow color */
+
+    animation: boxShadowAnimation 2s infinite;
+}
+
+@keyframes boxShadowAnimation {
+    0% {
+        box-shadow: 0 0 10px rgba(255, 255, 255, 1); /* Starting color */
+    }
+    50% {
+        box-shadow: 0 0 20px rgba(255, 255, 255, 1); /* Intermediate color */
+    }
+    100% {
+        box-shadow: 0 0 10px rgba(255, 255, 255, 1); /* Ending color */
+    }
+}
 
   .overlay {
         position: fixed;
