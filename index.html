@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="index.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0">
   <link rel="shorcut icon" href="title.png"/>
+    
 </head>
 <body>
   <header>
@@ -34,8 +35,11 @@
     </nav>
 
   </header>
+ 
 
+    
   <section class="hero-section">
+      
 
     <div class="content">
       <div class="container">
@@ -71,6 +75,33 @@
         </a>
         </div>
   </section>
+<div id="login-overlay" class="overlay">
+    <img class="logo-image" src="https://ragnvindr08.github.io/webocode.com/title.png" alt="Logo">
+    <div class="login-form">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+        <br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        <br>
+        <button onclick="attemptLogin()">Login</button>
+        <!-- Add the "Go to Sign Up" button in the login form -->
+        <button onclick="switchToSignUpForm()">Go to Sign Up</button>
+    </div>
+
+    <div class="signup-form">
+        <label for="signup-username">Username:</label>
+        <input type="text" id="signup-username" name="signup-username" required>
+        <br>
+        <label for="signup-password">Password:</label>
+        <input type="password" id="signup-password" name="signup-password" required>
+        <br>
+        <button onclick="attemptSignUp()">Sign Up</button>
+        <div id="signup-feedback" style="color: red;"></div>
+        <!-- Add the "Already Have an Account?" button in the signup form -->
+        <button onclick="switchToLoginForm()">Already Have an Account?</button>
+    </div>
+</div>
 
   <script>
       function openCustomSizeWindow2() {
@@ -164,7 +195,9 @@
   window.open("https://www.codeavengers.com/" ,"CustomSizeWindow", "width=" + width + ",height=" + height + ",left=" + left + ",top=" + top);
 
 }
+      
 
+      
    function openCustomSizeWindow8() {
   // Define the window size (width and height) in pixels
   var width = 400;
@@ -224,7 +257,96 @@ function openCustomSizeWindow9() {
   window.open("compiler.html" ,"CustomSizeWindow", "width=" + width + ",height=" + height + ",left=" + left + ",top=" + top);
 
 }
+   const accounts = [
+    { username: "user1", password: "pass1" },
+    { username: "user2", password: "pass2" },
+    // Add more accounts as needed
+  ];
 
-  </script>
+  function attemptLogin() {
+    const enteredUsername = document.getElementById('username').value;
+    const enteredPassword = document.getElementById('password').value;
+
+    const foundAccount = accounts.find(account => account.username === enteredUsername && account.password === enteredPassword);
+
+    if (foundAccount) {
+      handleSuccessfulLogin();
+    } else {
+      console.log("Login failed. Please check your credentials.");
+    }
+  }
+
+  function attemptSignUp() {
+    const signupUsername = document.getElementById('signup-username').value;
+    const signupPassword = document.getElementById('signup-password').value;
+
+    // Check if the username is already taken
+    const isUsernameTaken = accounts.some(account => account.username === signupUsername);
+
+    // Check if signupUsername or signupPassword is empty
+    if (!signupUsername.trim() || !signupPassword.trim()) {
+        const signupFeedback = document.getElementById('signup-feedback');
+        if (signupFeedback) {
+            signupFeedback.innerText = "Please fill out both username and password fields.";
+        }
+    } else if (isUsernameTaken) {
+        const signupFeedback = document.getElementById('signup-feedback');
+        if (signupFeedback) {
+            signupFeedback.innerText = "Username is already taken. Please choose a different one.";
+        }
+    } else {
+        // Add the new account to the array
+        accounts.push({ username: signupUsername, password: signupPassword });
+
+        // Clear the signup feedback
+        const signupFeedback = document.getElementById('signup-feedback');
+        if (signupFeedback) {
+            signupFeedback.innerText = "";
+        }
+
+        // Switch to the login form after successful signup
+        switchToLoginForm();
+    }
+}
+
+  function handleSuccessfulLogin() {
+    const loginOverlay = document.getElementById('login-overlay');
+    if (loginOverlay) {
+      loginOverlay.classList.add('success');
+      setTimeout(() => {
+        loginOverlay.remove();
+        alert("Login successfully!");
+        alert("Login successful! Welcome, " + document.getElementById('username').value + "!");
+      }, 1000); // Adjust the timeout duration as needed
+    }
+  }
+
+  function switchToSignUpForm() {
+    const loginForm = document.querySelector('.login-form');
+    const signupForm = document.querySelector('.signup-form');
+
+    if (loginForm && signupForm) {
+      loginForm.style.display = 'none';
+      signupForm.style.display = 'block';
+      
+      
+      
+        
+    }
+  }
+
+  function switchToLoginForm() {
+    const loginForm = document.querySelector('.login-form');
+    const signupForm = document.querySelector('.signup-form');
+
+    if (loginForm && signupForm) {
+      loginForm.style.display = 'block';
+      signupForm.style.display = 'none';
+        
+      
+    }
+  }
+
+</script>
 </body>
 </html>
