@@ -5,7 +5,7 @@
 <body>
   <h1>Example Output</h1>
 <h3>New Featured</h3>
-<img src="https://raw.githubusercontent.com/ragnvindr08/webocode/main/Screenshot%202024-01-24%205.51.21%20AM.png](https://raw.githubusercontent.com/ragnvindr08/webocode.com/main/Screenshot%202024-02-03%205.35.30%20AM.png">
+<img src="https://raw.githubusercontent.com/ragnvindr08/webocode.com/main/Screenshot%202024-02-03%205.35.30%20AM.png">
 <h3>New</h3>
 <img src="https://raw.githubusercontent.com/ragnvindr08/webocode/main/Screenshot%202024-01-24%205.51.21%20AM.png">
 <h3>Old</h3>
