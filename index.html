@@ -75,32 +75,39 @@
         </a>
         </div>
   </section>
+    
 <div id="login-overlay" class="overlay">
-    <img class="logo-image" src="https://ragnvindr08.github.io/webocode.com/title.png" alt="Logo">
-    <div class="login-form">
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username" required>
-        <br>
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required>
-        <br>
-        <button onclick="attemptLogin()">Login</button>
-        <!-- Add the "Go to Sign Up" button in the login form -->
-        <button onclick="switchToSignUpForm()">Go to Sign Up</button>
+    <div class="content">
+        <div class="images-container">
+            <img class="logo-image" src="https://ragnvindr08.github.io/webocode.com/title.png" alt="Logo">
+            <img class="logo1-image" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgd2lkdGg9IjUwMCIgaGVpZ2h0PSI1MDAiIHZpZXdCb3g9IjAgMCA1MDAgNTAwIj48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iNTAwIiBoZWlnaHQ9IjUwMCIgZmlsbD0iI2ZmZmZmZiIvPjxnIHRyYW5zZm9ybT0ic2NhbGUoMTcuMjQxKSI+PGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMCwwKSI+PGc+PGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMy41LDMuNSkiPjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgZD0iTS0zLjUgLTMuNUwzLjUgLTMuNUwzLjUgMy41TC0zLjUgMy41Wk0tMi41IC0yLjVMLTIuNSAyLjVMMi41IDIuNUwyLjUgLTIuNVoiIGZpbGw9IiMwMDAwMDAiLz48cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0tMS41IC0xLjVMMS41IC0xLjVMMS41IDEuNUwtMS41IDEuNVoiIGZpbGw9IiNiMDcxMjQiLz48L2c+PC9nPjxnPjxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDI1LjUsMy41KSI+PGcgdHJhbnNmb3JtPSJyb3RhdGUoOTApIj48cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0tMy41IC0zLjVMMy41IC0zLjVMMy41IDMuNUwtMy41IDMuNVpNLTIuNSAtMi41TC0yLjUgMi41TDIuNSAyLjVMMi41IC0yLjVaIiBmaWxsPSIjMDAwMDAwIi8+PHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBkPSJNLTEuNSAtMS41TDEuNSAtMS41TDEuNSAxLjVMLTEuNSAxLjVaIiBmaWxsPSIjYjA3MTI0Ii8+PC9nPjwvZz48L2c+PGc+PGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMy41LDI1LjUpIj48ZyB0cmFuc2Zvcm09InJvdGF0ZSgtOTApIj48cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0tMy41IC0zLjVMMy41IC0zLjVMMy41IDMuNUwtMy41IDMuNVpNLTIuNSAtMi41TC0yLjUgMi41TDIuNSAyLjVMMi41IC0yLjVaIiBmaWxsPSIjMDAwMDAwIi8+PHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBkPSJNLTEuNSAtMS41TDEuNSAtMS41TDEuNSAxLjVMLTEuNSAxLjVaIiBmaWxsPSIjYjA3MTI0Ii8+PC9nPjwvZz48L2c+PGRlZnM+PGxpbmVhckdyYWRpZW50IGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4MT0iMCIgeTE9IjAiIHgyPSIwIiB5Mj0iMjkiIGlkPSJnMSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzk3MzEzMSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgZD0iTTkgMEw5IDFMOCAxTDggMkw5IDJMOSAzTDggM0w4IDRMMTAgNEwxMCA3TDExIDdMMTEgNEwxMiA0TDEyIDVMMTMgNUwxMyA2TDEyIDZMMTIgOUwxMyA5TDEzIDZMMTQgNkwxNCA3TDE1IDdMMTUgNEwxNiA0TDE2IDVMMTcgNUwxNyA2TDE2IDZMMTYgOEwxNCA4TDE0IDlMMTYgOUwxNiA4TDE3IDhMMTcgNkwxOCA2TDE4IDdMMTkgN0wxOSA4TDIwIDhMMjAgN0wyMSA3TDIxIDZMMjAgNkwyMCA1TDIxIDVMMjEgNEwxOSA0TDE5IDNMMjEgM0wyMSAyTDE4IDJMMTggMUwxNyAxTDE3IDJMMTYgMkwxNiAxTDE1IDFMMTUgMEwxNCAwTDE0IDFMMTEgMUwxMSAyTDEwIDJMMTAgMFpNMTkgMEwxOSAxTDIxIDFMMjEgMFpNMTIgMkwxMiA0TDEzIDRMMTMgNUwxNCA1TDE0IDRMMTMgNEwxMyAyWk0xNCAyTDE0IDNMMTYgM0wxNiAyWk0xMCAzTDEwIDRMMTEgNEwxMSAzWk0xNyAzTDE3IDVMMTggNUwxOCA2TDE5IDZMMTkgN0wyMCA3TDIwIDZMMTkgNkwxOSA0TDE4IDRMMTggM1pNOCA1TDggN0w5IDdMOSA1Wk0wIDhMMCA5TDUgOUw1IDhaTTYgOEw2IDlMNyA5TDcgMTBMMiAxMEwyIDEyTDMgMTJMMyAxM0w1IDEzTDUgMTRMMyAxNEwzIDE1TDIgMTVMMiAxNEwwIDE0TDAgMjFMMSAyMUwxIDE4TDIgMThMMiAxNkwzIDE2TDMgMTVMNCAxNUw0IDE2TDUgMTZMNSAxN0w5IDE3TDkgMTZMMTAgMTZMMTAgMTVMOSAxNUw5IDE0TDggMTRMOCAxM0wxMCAxM0wxMCAxNEwxMSAxNEwxMSAxM0wxMiAxM0wxMiAxNEwxMyAxNEwxMyAxNUwxMiAxNUwxMiAxN0wxNiAxN0wxNiAxOEwxMCAxOEwxMCAxOUw5IDE5TDkgMThMOCAxOEw4IDE5TDkgMTlMOSAyMUw4IDIxTDggMjBMNiAyMEw2IDIxTDggMjFMOCAyM0w5IDIzTDkgMjRMOCAyNEw4IDI5TDEwIDI5TDEwIDI4TDkgMjhMOSAyNkwxMCAyNkwxMCAyN0wxMSAyN0wxMSAyOEwxNCAyOEwxNCAyOUwxNyAyOUwxNyAyOEwxOCAyOEwxOCAyOUwyMyAyOUwyMyAyOEwyMSAyOEwyMSAyN0wyMCAyN0wyMCAyNkwyMyAyNkwyMyAyN0wyNCAyN0wyNCAyNUwyNSAyNUwyNSAyM0wyNiAyM0wyNiAyNUwyOSAyNUwyOSAyM0wyNyAyM0wyNyAyMkwyOCAyMkwyOCAyMEwyOSAyMEwyOSAxN0wyOCAxN0wyOCAxOEwyNiAxOEwyNiAxN0wyNCAxN0wyNCAxOEwyMyAxOEwyMyAxN0wyMSAxN0wyMSAxOEwyMCAxOEwyMCAxN0wxOSAxN0wxOSAxOEwyMCAxOEwyMCAxOUwxOCAxOUwxOCAxOEwxNyAxOEwxNyAxNUwxOCAxNUwxOCAxNEwxOSAxNEwxOSAxMkwyMCAxMkwyMCAxMUwyMSAxMUwyMSAxMkwyMiAxMkwyMiAxM0wyMSAxM0wyMSAxNEwyMCAxNEwyMCAxNUwxOSAxNUwxOSAxNkwyMCAxNkwyMCAxNUwyMSAxNUwyMSAxNEwyMyAxNEwyMyAxM0wyNCAxM0wyNCAxNEwyNSAxNEwyNSAxNUwyMiAxNUwyMiAxNkwyNSAxNkwyNSAxNUwyNyAxNUwyNyAxNkwyOSAxNkwyOSAxNEwyOCAxNEwyOCAxM0wyNyAxM0wyNyAxNEwyNiAxNEwyNiAxM0wyNSAxM0wyNSAxMkwyNiAxMkwyNiAxMUwyNyAxMUwyNyAxMEwyOCAxMEwyOCA4TDI3IDhMMjcgMTBMMjYgMTBMMjYgOEwyNSA4TDI1IDlMMjQgOUwyNCA4TDIzIDhMMjMgOUwyMiA5TDIyIDhMMjEgOEwyMSA5TDIyIDlMMjIgMTBMMjUgMTBMMjUgMTFMMjEgMTFMMjEgMTBMMTkgMTBMMTkgOUwxOCA5TDE4IDEwTDE3IDEwTDE3IDExTDE2IDExTDE2IDEwTDExIDEwTDExIDExTDEwIDExTDEwIDlMMTEgOUwxMSA4Wk04IDlMOCAxMEw5IDEwTDkgOVpNMCAxMEwwIDEzTDEgMTNMMSAxMFpNMTggMTBMMTggMTFMMTkgMTFMMTkgMTBaTTYgMTFMNiAxMkw1IDEyTDUgMTNMNiAxM0w2IDE0TDcgMTRMNyAxM0w4IDEzTDggMTJMOSAxMkw5IDExTDggMTFMOCAxMkw3IDEyTDcgMTFaTTEyIDExTDEyIDEzTDEzIDEzTDEzIDE0TDE0IDE0TDE0IDE2TDE2IDE2TDE2IDE1TDE3IDE1TDE3IDE0TDE4IDE0TDE4IDEyTDE3IDEyTDE3IDE0TDE2IDE0TDE2IDE1TDE1IDE1TDE1IDE0TDE0IDE0TDE0IDEyTDE2IDEyTDE2IDExWk0yOCAxMUwyOCAxMkwyOSAxMkwyOSAxMVpNNiAxMkw2IDEzTDcgMTNMNyAxMlpNMTAgMTJMMTAgMTNMMTEgMTNMMTEgMTJaTTYgMTVMNiAxNkw3IDE2TDcgMTVaTTggMTVMOCAxNkw5IDE2TDkgMTVaTTMgMTdMMyAxOUwyIDE5TDIgMjBMMyAyMEwzIDE5TDQgMTlMNCAxN1pNNiAxOEw2IDE5TDcgMTlMNyAxOFpNMjEgMThMMjEgMTlMMjMgMTlMMjMgMThaTTI0IDE4TDI0IDE5TDI1IDE5TDI1IDIwTDI3IDIwTDI3IDE5TDI1IDE5TDI1IDE4Wk0xMCAxOUwxMCAyMUw5IDIxTDkgMjJMMTEgMjJMMTEgMjNMMTAgMjNMMTAgMjRMOSAyNEw5IDI1TDEwIDI1TDEwIDI2TDExIDI2TDExIDI1TDEyIDI1TDEyIDI2TDE0IDI2TDE0IDI1TDEzIDI1TDEzIDI0TDEyIDI0TDEyIDIxTDExIDIxTDExIDE5Wk0xMiAxOUwxMiAyMEwxNCAyMEwxNCAyMUwxMyAyMUwxMyAyMkwxNCAyMkwxNCAyMUwxNSAyMUwxNSAyM0wxNCAyM0wxNCAyNEwxNyAyNEwxNyAyMkwxOCAyMkwxOCAyMUwxNyAyMUwxNyAyMkwxNiAyMkwxNiAyMUwxNSAyMUwxNSAyMEwxNiAyMEwxNiAxOVpNMTcgMTlMMTcgMjBMMTggMjBMMTggMTlaTTQgMjBMNCAyMUw1IDIxTDUgMjBaTTE5IDIwTDE5IDIzTDIwIDIzTDIwIDIwWk0yMSAyMUwyMSAyNEwyNCAyNEwyNCAyMVpNMjUgMjFMMjUgMjJMMjcgMjJMMjcgMjFaTTIyIDIyTDIyIDIzTDIzIDIzTDIzIDIyWk0xMCAyNEwxMCAyNUwxMSAyNUwxMSAyNFpNMTggMjRMMTggMjVMMTcgMjVMMTcgMjZMMTYgMjZMMTYgMjVMMTUgMjVMMTUgMjdMMTQgMjdMMTQgMjhMMTYgMjhMMTYgMjdMMTcgMjdMMTcgMjZMMTggMjZMMTggMjdMMTkgMjdMMTkgMjhMMjAgMjhMMjAgMjdMMTkgMjdMMTkgMjZMMjAgMjZMMjAgMjRaTTE4IDI1TDE4IDI2TDE5IDI2TDE5IDI1Wk0yNiAyNkwyNiAyN0wyNSAyN0wyNSAyOEwyNCAyOEwyNCAyOUwyNyAyOUwyNyAyN0wyOCAyN0wyOCAyOEwyOSAyOEwyOSAyN0wyOCAyN0wyOCAyNloiIGZpbGw9InVybCgjZzEpIi8+PC9nPjwvZz48L3N2Zz4K" alt="Second Image">
+        </div>
+
+        <div class="login-form">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            <br>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <br>
+            <button onclick="attemptLogin()">Login</button>
+            <button onclick="switchToSignUpForm()">Go to Sign Up</button>
+        </div>
+
+        <div class="signup-form">
+            <label for="signup-username">Username:</label>
+            <input type="text" id="signup-username" name="signup-username" required>
+            <br>
+            <label for="signup-password">Password:</label>
+            <input type="password" id="signup-password" name="signup-password" required>
+            <br>
+            <button onclick="attemptSignUp()">Sign Up</button>
+            <div id="signup-feedback" style="color: red;"></div>
+            <button onclick="switchToLoginForm()">Already Have an Account?</button
+        </div>
     </div>
 
-    <div class="signup-form">
-        <label for="signup-username">Username:</label>
-        <input type="text" id="signup-username" name="signup-username" required>
-        <br>
-        <label for="signup-password">Password:</label>
-        <input type="password" id="signup-password" name="signup-password" required>
-        <br>
-        <button onclick="attemptSignUp()">Sign Up</button>
-        <div id="signup-feedback" style="color: red;"></div>
-        <!-- Add the "Already Have an Account?" button in the signup form -->
-        <button onclick="switchToLoginForm()">Already Have an Account?</button>
-    </div>
+
 </div>
 
   <script>
@@ -347,6 +354,10 @@ function openCustomSizeWindow9() {
     }
   }
 
-</script>
+
+
+   
+
+  </script>
 </body>
 </html>
