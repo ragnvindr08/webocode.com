@@ -17,7 +17,7 @@
 
 
       <ul class="menu-links">
-        <li><a href="javascript:void(0);" onclick="openCustomSizeWindow8();">Login</a></li>
+        <li><a href="javascript:void(0);" onclick="openCustomSizeWindow8();">Admin</a></li>
       <ul class="menu-links">
         <li><a href="javascript:void(0);" onclick="openCustomSizeWindow();">Repository</a></li>
         <li><a href="navigation.html">Navigation menu</a></li>
@@ -27,11 +27,9 @@
           </a>
         </li>
         <li><a href="javascript:void(0);" onclick="openCustomSizeWindow2();">Information</a></li>
-        <li class="join-btn"><a href="javascript:void(0);" onclick="openCustomSizeWindow10();">Compiler Mode</a></li>
-
-        <span id="close-menu-btn" class="material-symbols-outlined">close</span>
+        <li class="join-btn"><a href="javascript:void(0);" onclick="openCustomSizeWindow10();">Compiler</a></li>
       </ul>
-      <span id="hamburger-btn" class="material-symbols-outlined">menu</span>
+      
     </nav>
 
   </header>
@@ -74,41 +72,100 @@
           <img src="vscode1.jpg" alt="vsstudio" class="center1">
         </a>
         </div>
+
   </section>
     
-<div id="login-overlay" class="overlay">
-    <div class="content">
-        <div class="images-container">
-            <img class="logo-image" src="https://ragnvindr08.github.io/webocode.com/title.png" alt="Logo">
-            <img class="logo1-image" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgd2lkdGg9IjUwMCIgaGVpZ2h0PSI1MDAiIHZpZXdCb3g9IjAgMCA1MDAgNTAwIj48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iNTAwIiBoZWlnaHQ9IjUwMCIgZmlsbD0iI2ZmZmZmZiIvPjxnIHRyYW5zZm9ybT0ic2NhbGUoMTcuMjQxKSI+PGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMCwwKSI+PGc+PGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMy41LDMuNSkiPjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgZD0iTS0zLjUgLTMuNUwzLjUgLTMuNUwzLjUgMy41TC0zLjUgMy41Wk0tMi41IC0yLjVMLTIuNSAyLjVMMi41IDIuNUwyLjUgLTIuNVoiIGZpbGw9IiMwMDAwMDAiLz48cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0tMS41IC0xLjVMMS41IC0xLjVMMS41IDEuNUwtMS41IDEuNVoiIGZpbGw9IiNiMDcxMjQiLz48L2c+PC9nPjxnPjxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDI1LjUsMy41KSI+PGcgdHJhbnNmb3JtPSJyb3RhdGUoOTApIj48cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0tMy41IC0zLjVMMy41IC0zLjVMMy41IDMuNUwtMy41IDMuNVpNLTIuNSAtMi41TC0yLjUgMi41TDIuNSAyLjVMMi41IC0yLjVaIiBmaWxsPSIjMDAwMDAwIi8+PHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBkPSJNLTEuNSAtMS41TDEuNSAtMS41TDEuNSAxLjVMLTEuNSAxLjVaIiBmaWxsPSIjYjA3MTI0Ii8+PC9nPjwvZz48L2c+PGc+PGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMy41LDI1LjUpIj48ZyB0cmFuc2Zvcm09InJvdGF0ZSgtOTApIj48cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0tMy41IC0zLjVMMy41IC0zLjVMMy41IDMuNUwtMy41IDMuNVpNLTIuNSAtMi41TC0yLjUgMi41TDIuNSAyLjVMMi41IC0yLjVaIiBmaWxsPSIjMDAwMDAwIi8+PHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBkPSJNLTEuNSAtMS41TDEuNSAtMS41TDEuNSAxLjVMLTEuNSAxLjVaIiBmaWxsPSIjYjA3MTI0Ii8+PC9nPjwvZz48L2c+PGRlZnM+PGxpbmVhckdyYWRpZW50IGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4MT0iMCIgeTE9IjAiIHgyPSIwIiB5Mj0iMjkiIGlkPSJnMSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzk3MzEzMSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgZD0iTTkgMEw5IDFMOCAxTDggMkw5IDJMOSAzTDggM0w4IDRMMTAgNEwxMCA3TDExIDdMMTEgNEwxMiA0TDEyIDVMMTMgNUwxMyA2TDEyIDZMMTIgOUwxMyA5TDEzIDZMMTQgNkwxNCA3TDE1IDdMMTUgNEwxNiA0TDE2IDVMMTcgNUwxNyA2TDE2IDZMMTYgOEwxNCA4TDE0IDlMMTYgOUwxNiA4TDE3IDhMMTcgNkwxOCA2TDE4IDdMMTkgN0wxOSA4TDIwIDhMMjAgN0wyMSA3TDIxIDZMMjAgNkwyMCA1TDIxIDVMMjEgNEwxOSA0TDE5IDNMMjEgM0wyMSAyTDE4IDJMMTggMUwxNyAxTDE3IDJMMTYgMkwxNiAxTDE1IDFMMTUgMEwxNCAwTDE0IDFMMTEgMUwxMSAyTDEwIDJMMTAgMFpNMTkgMEwxOSAxTDIxIDFMMjEgMFpNMTIgMkwxMiA0TDEzIDRMMTMgNUwxNCA1TDE0IDRMMTMgNEwxMyAyWk0xNCAyTDE0IDNMMTYgM0wxNiAyWk0xMCAzTDEwIDRMMTEgNEwxMSAzWk0xNyAzTDE3IDVMMTggNUwxOCA2TDE5IDZMMTkgN0wyMCA3TDIwIDZMMTkgNkwxOSA0TDE4IDRMMTggM1pNOCA1TDggN0w5IDdMOSA1Wk0wIDhMMCA5TDUgOUw1IDhaTTYgOEw2IDlMNyA5TDcgMTBMMiAxMEwyIDEyTDMgMTJMMyAxM0w1IDEzTDUgMTRMMyAxNEwzIDE1TDIgMTVMMiAxNEwwIDE0TDAgMjFMMSAyMUwxIDE4TDIgMThMMiAxNkwzIDE2TDMgMTVMNCAxNUw0IDE2TDUgMTZMNSAxN0w5IDE3TDkgMTZMMTAgMTZMMTAgMTVMOSAxNUw5IDE0TDggMTRMOCAxM0wxMCAxM0wxMCAxNEwxMSAxNEwxMSAxM0wxMiAxM0wxMiAxNEwxMyAxNEwxMyAxNUwxMiAxNUwxMiAxN0wxNiAxN0wxNiAxOEwxMCAxOEwxMCAxOUw5IDE5TDkgMThMOCAxOEw4IDE5TDkgMTlMOSAyMUw4IDIxTDggMjBMNiAyMEw2IDIxTDggMjFMOCAyM0w5IDIzTDkgMjRMOCAyNEw4IDI5TDEwIDI5TDEwIDI4TDkgMjhMOSAyNkwxMCAyNkwxMCAyN0wxMSAyN0wxMSAyOEwxNCAyOEwxNCAyOUwxNyAyOUwxNyAyOEwxOCAyOEwxOCAyOUwyMyAyOUwyMyAyOEwyMSAyOEwyMSAyN0wyMCAyN0wyMCAyNkwyMyAyNkwyMyAyN0wyNCAyN0wyNCAyNUwyNSAyNUwyNSAyM0wyNiAyM0wyNiAyNUwyOSAyNUwyOSAyM0wyNyAyM0wyNyAyMkwyOCAyMkwyOCAyMEwyOSAyMEwyOSAxN0wyOCAxN0wyOCAxOEwyNiAxOEwyNiAxN0wyNCAxN0wyNCAxOEwyMyAxOEwyMyAxN0wyMSAxN0wyMSAxOEwyMCAxOEwyMCAxN0wxOSAxN0wxOSAxOEwyMCAxOEwyMCAxOUwxOCAxOUwxOCAxOEwxNyAxOEwxNyAxNUwxOCAxNUwxOCAxNEwxOSAxNEwxOSAxMkwyMCAxMkwyMCAxMUwyMSAxMUwyMSAxMkwyMiAxMkwyMiAxM0wyMSAxM0wyMSAxNEwyMCAxNEwyMCAxNUwxOSAxNUwxOSAxNkwyMCAxNkwyMCAxNUwyMSAxNUwyMSAxNEwyMyAxNEwyMyAxM0wyNCAxM0wyNCAxNEwyNSAxNEwyNSAxNUwyMiAxNUwyMiAxNkwyNSAxNkwyNSAxNUwyNyAxNUwyNyAxNkwyOSAxNkwyOSAxNEwyOCAxNEwyOCAxM0wyNyAxM0wyNyAxNEwyNiAxNEwyNiAxM0wyNSAxM0wyNSAxMkwyNiAxMkwyNiAxMUwyNyAxMUwyNyAxMEwyOCAxMEwyOCA4TDI3IDhMMjcgMTBMMjYgMTBMMjYgOEwyNSA4TDI1IDlMMjQgOUwyNCA4TDIzIDhMMjMgOUwyMiA5TDIyIDhMMjEgOEwyMSA5TDIyIDlMMjIgMTBMMjUgMTBMMjUgMTFMMjEgMTFMMjEgMTBMMTkgMTBMMTkgOUwxOCA5TDE4IDEwTDE3IDEwTDE3IDExTDE2IDExTDE2IDEwTDExIDEwTDExIDExTDEwIDExTDEwIDlMMTEgOUwxMSA4Wk04IDlMOCAxMEw5IDEwTDkgOVpNMCAxMEwwIDEzTDEgMTNMMSAxMFpNMTggMTBMMTggMTFMMTkgMTFMMTkgMTBaTTYgMTFMNiAxMkw1IDEyTDUgMTNMNiAxM0w2IDE0TDcgMTRMNyAxM0w4IDEzTDggMTJMOSAxMkw5IDExTDggMTFMOCAxMkw3IDEyTDcgMTFaTTEyIDExTDEyIDEzTDEzIDEzTDEzIDE0TDE0IDE0TDE0IDE2TDE2IDE2TDE2IDE1TDE3IDE1TDE3IDE0TDE4IDE0TDE4IDEyTDE3IDEyTDE3IDE0TDE2IDE0TDE2IDE1TDE1IDE1TDE1IDE0TDE0IDE0TDE0IDEyTDE2IDEyTDE2IDExWk0yOCAxMUwyOCAxMkwyOSAxMkwyOSAxMVpNNiAxMkw2IDEzTDcgMTNMNyAxMlpNMTAgMTJMMTAgMTNMMTEgMTNMMTEgMTJaTTYgMTVMNiAxNkw3IDE2TDcgMTVaTTggMTVMOCAxNkw5IDE2TDkgMTVaTTMgMTdMMyAxOUwyIDE5TDIgMjBMMyAyMEwzIDE5TDQgMTlMNCAxN1pNNiAxOEw2IDE5TDcgMTlMNyAxOFpNMjEgMThMMjEgMTlMMjMgMTlMMjMgMThaTTI0IDE4TDI0IDE5TDI1IDE5TDI1IDIwTDI3IDIwTDI3IDE5TDI1IDE5TDI1IDE4Wk0xMCAxOUwxMCAyMUw5IDIxTDkgMjJMMTEgMjJMMTEgMjNMMTAgMjNMMTAgMjRMOSAyNEw5IDI1TDEwIDI1TDEwIDI2TDExIDI2TDExIDI1TDEyIDI1TDEyIDI2TDE0IDI2TDE0IDI1TDEzIDI1TDEzIDI0TDEyIDI0TDEyIDIxTDExIDIxTDExIDE5Wk0xMiAxOUwxMiAyMEwxNCAyMEwxNCAyMUwxMyAyMUwxMyAyMkwxNCAyMkwxNCAyMUwxNSAyMUwxNSAyM0wxNCAyM0wxNCAyNEwxNyAyNEwxNyAyMkwxOCAyMkwxOCAyMUwxNyAyMUwxNyAyMkwxNiAyMkwxNiAyMUwxNSAyMUwxNSAyMEwxNiAyMEwxNiAxOVpNMTcgMTlMMTcgMjBMMTggMjBMMTggMTlaTTQgMjBMNCAyMUw1IDIxTDUgMjBaTTE5IDIwTDE5IDIzTDIwIDIzTDIwIDIwWk0yMSAyMUwyMSAyNEwyNCAyNEwyNCAyMVpNMjUgMjFMMjUgMjJMMjcgMjJMMjcgMjFaTTIyIDIyTDIyIDIzTDIzIDIzTDIzIDIyWk0xMCAyNEwxMCAyNUwxMSAyNUwxMSAyNFpNMTggMjRMMTggMjVMMTcgMjVMMTcgMjZMMTYgMjZMMTYgMjVMMTUgMjVMMTUgMjdMMTQgMjdMMTQgMjhMMTYgMjhMMTYgMjdMMTcgMjdMMTcgMjZMMTggMjZMMTggMjdMMTkgMjdMMTkgMjhMMjAgMjhMMjAgMjdMMTkgMjdMMTkgMjZMMjAgMjZMMjAgMjRaTTE4IDI1TDE4IDI2TDE5IDI2TDE5IDI1Wk0yNiAyNkwyNiAyN0wyNSAyN0wyNSAyOEwyNCAyOEwyNCAyOUwyNyAyOUwyNyAyN0wyOCAyN0wyOCAyOEwyOSAyOEwyOSAyN0wyOCAyN0wyOCAyNloiIGZpbGw9InVybCgjZzEpIi8+PC9nPjwvZz48L3N2Zz4K" alt="Second Image">
-        </div>
+<div class="content">
+<section>
+    <h3>WEBOCODE</h3>
+    <img src="https://raw.githubusercontent.com/ragnvindr08/webocode/main/Screenshot%202023-12-19%204.41.27%20AM.png">
+    <p>🚀 Exciting News: Webocode Release! 🚀 We are thrilled to announce the much-anticipated release of Webocode, our latest website! 🌐✨ After months of dedication and hard work, we are excited to unveil a platform that reflects our commitment to innovation and user satisfaction. Webocode brings a fresh, user-friendly experience, combining sleek design with cutting-edge functionalities. Explore our website to discover a seamless blend of creativity and technology. Dive into a world of user-friendly interfaces, captivating content, and smooth navigation. Whether you're a visitor or a long-time supporter, we've designed Webocode with you in mind. Join us on this journey as we introduce a new chapter in our online presence. Your feedback is invaluable, and we can't wait to hear what you think. Thank you for being part of the Webocode community. Let's explore, create, and connect together! </p>
+  </section>
+<section>
+    <h2>W3Schools</h2>
+    <img src="https://miro.medium.com/v2/resize:fit:2668/1*Jrc_LmNnA-EG0-G5ava1nA.png">
+    <p>W3Schools is an online educational platform widely recognized for its comprehensive tutorials, references, and interactive coding exercises in web development and related technologies. Founded in 1998 by Jan Egil Refsnes and currently maintained by Refsnes Data in Norway, W3Schools serves as a go-to resource for beginners and professionals alike seeking to learn or refresh their knowledge of web technologies.
 
-        <div class="login-form">
-            <label for="username">Username:</label>
-            <input type="text" id="username" name="username" required>
-            <br>
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" required>
-            <br>
-            <button onclick="attemptLogin()">Login</button>
-            <button onclick="switchToSignUpForm()">Go to Sign Up</button>
-        </div>
+The platform covers a wide range of topics, including HTML, CSS, JavaScript, XML, SQL, Python, PHP, Bootstrap, and many others. Each topic is meticulously organized into tutorials, with clear explanations, code examples, and interactive exercises designed to facilitate learning and understanding.
 
-        <div class="signup-form">
-            <label for="signup-username">Username:</label>
-            <input type="text" id="signup-username" name="signup-username" required>
-            <br>
-            <label for="signup-password">Password:</label>
-            <input type="password" id="signup-password" name="signup-password" required>
-            <br>
-            <button onclick="attemptSignUp()">Sign Up</button>
-            <div id="signup-feedback" style="color: red;"></div>
-            <button onclick="switchToLoginForm()">Already Have an Account?</button
-        </div>
-    </div>
+One of the key strengths of W3Schools is its accessibility. The platform is entirely web-based, requiring only a browser and internet connection to access its wealth of educational content. This accessibility makes it particularly valuable for self-paced learning, allowing users to study at their own convenience, whether they're at home, work, or on the go.
 
+W3Schools' tutorials are structured in a beginner-friendly manner, starting with fundamental concepts and gradually progressing to more advanced topics. This step-by-step approach ensures that learners build a solid foundation before tackling more complex material, fostering a deeper understanding of the subject matter.
 
+In addition to tutorials, W3Schools provides comprehensive references for each technology it covers. These references serve as handy guides for quick lookup of syntax, properties, methods, and other essential information, making them invaluable resources for developers during coding and troubleshooting.
+
+One of the distinguishing features of W3Schools is its interactive coding environment. Throughout the tutorials and exercises, users can experiment with code directly within the browser, seeing the results in real-time. This hands-on approach not only reinforces learning but also empowers users to explore and experiment with different concepts independently.
+
+W3Schools also offers certification programs for various technologies, allowing learners to validate their skills and knowledge through official accreditation. These certifications can be a valuable asset for individuals seeking employment or advancement in the field of web development, providing tangible evidence of their expertise.
+
+</p>
+    <a href="https://www.w3schools.com/" target="_blank">Visit W3Schools</a>
+  </section>
+  <section>
+    <h2>SoloLearn</h2>
+      <img src="https://miro.medium.com/v2/resize:fit:2000/1*O8C06SRcBxixT0siyXB2UQ.jpeg">
+    <p>SoloLearn is a popular online platform that offers interactive coding tutorials and challenges for learning various programming languages and related technologies. Launched in 2014 by Yeva Hyusyan, Davit Kocharyan, and Harutyun Mkrtchyan, SoloLearn has quickly gained traction among beginner and experienced programmers alike.
+
+One of the standout features of SoloLearn is its user-friendly interface, which makes learning to code both engaging and accessible. The platform provides bite-sized lessons, quizzes, and coding challenges that cater to different skill levels, from absolute beginners to seasoned developers looking to expand their repertoire.
+
+SoloLearn covers a wide range of programming languages, including Python, JavaScript, Java, C++, C#, PHP, HTML, CSS, and many more. Each language is broken down into structured courses, with lessons covering syntax, concepts, and practical examples to reinforce learning.
+
+One of the key strengths of SoloLearn is its emphasis on interactivity. Users can write and execute code directly within the platform, receiving immediate feedback on their solutions. This hands-on approach not only accelerates learning but also fosters a deeper understanding of programming principles.
+
+In addition to tutorials, SoloLearn offers a variety of challenges and projects to help users apply their knowledge in real-world scenarios. These challenges range from simple exercises to more complex coding projects, providing opportunities for learners to practice and hone their skills.
+
+SoloLearn also fosters a sense of community among its users through features like discussion forums and leaderboards. Learners can ask questions, share insights, and collaborate with fellow programmers, creating a supportive environment for skill development.
+
+One of the unique aspects of SoloLearn is its mobile-first approach. The platform is available as a mobile app for both iOS and Android devices, allowing users to learn and practice coding anytime, anywhere. This flexibility makes SoloLearn an ideal choice for individuals with busy schedules or those who prefer to learn on the go.
+
+</p>
+    <a href="https://www.sololearn.com/" target="_blank">Visit SoloLearn</a>
+  </section>
+  <section>
+    <h2>Programiz</h2>
+ <img src="https://media.licdn.com/dms/image/C5612AQHs165bEa01Wg/article-cover_image-shrink_720_1280/0/1582101271534?e=2147483647&v=beta&t=YMhVktmYSKP_IO5aYR5kEb9UbebH_JkaLtyDjz9PTVo">
+    <p>Programiz is an online platform that provides comprehensive tutorials, examples, and references for learning various programming languages and computer science concepts. Established in 2012 by Ankush Singla and Ritika Singh, Programiz has become a go-to resource for programmers of all skill levels seeking to enhance their coding knowledge and skills.
+
+One of the key features of Programiz is its user-friendly interface, which makes navigating through tutorials and examples intuitive and efficient. The platform offers tutorials for popular programming languages such as Python, Java, C, C++, JavaScript, and others, as well as topics like data structures, algorithms, and object-oriented programming.
+
+Programiz's tutorials are structured in a step-by-step format, starting with basic concepts and gradually progressing to more advanced topics. Each tutorial is accompanied by clear explanations, code snippets, and interactive examples that help learners understand the underlying principles and practical applications of the concepts being taught.
+
+In addition to tutorials, Programiz provides a wealth of coding examples and exercises that allow users to practice and reinforce their learning. These examples cover a wide range of programming scenarios, from simple tasks to complex algorithms, providing ample opportunities for hands-on experience.
+
+One of the standout features of Programiz is its focus on simplicity and clarity. The platform strives to explain complex programming concepts in a straightforward and easy-to-understand manner, making it accessible to beginners while still offering value to more experienced developers.
+
+Programiz also offers a variety of resources for users looking to deepen their understanding of specific topics or languages. These resources include cheat sheets, quizzes, and reference guides that serve as handy tools for quick lookup of syntax, functions, and other essential information.
+
+The platform's commitment to quality is evident in its attention to detail and accuracy. Programiz's tutorials and examples undergo rigorous review and testing to ensure that they provide reliable and up-to-date information to users.
+
+Programiz is also known for its active and supportive community of learners and contributors. Users can engage with fellow programmers through forums, comments, and discussion threads, sharing insights, asking questions, and providing assistance to one another.
+
+Another notable aspect of Programiz is its commitment to continuous improvement and innovation. The platform regularly updates its content and features in response to user feedback and emerging trends in the tech industry, ensuring that learners have access to the most relevant and cutting-edge information.
+
+In summary, Programiz is a valuable resource for anyone looking to learn programming or enhance their coding skills. With its comprehensive tutorials, examples, and resources, Programiz empowers learners to master programming languages and concepts at their own pace, setting them on the path to success in the world of software development.</p>
+    <a href="https://www.programiz.com/" target="_blank">Visit Programiz</a>
+  </section>
+  <section>
+    <h2>GeeksforGeeks</h2>
+<img src="https://repository-images.githubusercontent.com/389729275/371ba38b-8a03-4bff-916c-c3fa5396ceda">
+    <p>GeeksforGeeks, founded in 2008 by Sandeep Jain, is one of the largest and most popular platforms for computer science and programming-related content. It offers a vast repository of tutorials, articles, coding challenges, interview preparation resources, and coding practice problems. GeeksforGeeks covers a wide range of topics, including data structures, algorithms, programming languages, system design, competitive programming, and more. Its tutorials are well-structured and comprehensive, providing in-depth explanations and code examples to help learners grasp complex concepts. GeeksforGeeks is widely used by students, professionals, and educators alike as a trusted resource for learning, practicing, and mastering programming skills.</p>
+    <a href="https://www.geeksforgeeks.org/" target="_blank">Visit GeeksforGeeks</a>
+  </section>
+  <section>
+    <h2>CodeAvengers</h2>
+<img src="https://assets.codeavengers.com/file/cloud/guides/ide/ide-code-avengers.png">
+    <p>
+GeeksforGeeks (GfG) and Code Avengers are two distinct online platforms that cater to different aspects of programming education, each with its unique approach and focus.
+
+GeeksforGeeks, founded in 2008 by Sandeep Jain, is one of the largest and most popular platforms for computer science and programming-related content. It offers a vast repository of tutorials, articles, coding challenges, interview preparation resources, and coding practice problems. GeeksforGeeks covers a wide range of topics, including data structures, algorithms, programming languages, system design, competitive programming, and more. Its tutorials are well-structured and comprehensive, providing in-depth explanations and code examples to help learners grasp complex concepts. GeeksforGeeks is widely used by students, professionals, and educators alike as a trusted resource for learning, practicing, and mastering programming skills.
+
+Code Avengers, on the other hand, is an interactive e-learning platform that focuses on teaching coding through engaging and hands-on lessons. Founded in 2012 by Michael Walmsley, Code Avengers offers courses in web development, programming, and computer science for learners of all ages and skill levels. Its courses utilize a combination of interactive exercises, guided projects, and video tutorials to teach programming languages like HTML, CSS, JavaScript, Python, and more. Code Avengers emphasizes a learn-by-doing approach, allowing learners to apply what they've learned in real-time and see immediate results. The platform also provides personalized feedback and support to help learners overcome challenges and achieve their coding goals.</p>
+    <a href="https://www.codeavenger.com/" target="_blank">Visit CodeAvenger</a>
+  </section>
 </div>
+    
+
+ 
 
   <script>
       function openCustomSizeWindow2() {
@@ -264,100 +321,10 @@ function openCustomSizeWindow9() {
   window.open("compiler.html" ,"CustomSizeWindow", "width=" + width + ",height=" + height + ",left=" + left + ",top=" + top);
 
 }
-   const accounts = [
-    { username: "user1", password: "pass1" },
-    { username: "user2", password: "pass2" },
-    // Add more accounts as needed
-  ];
-
-  function attemptLogin() {
-    const enteredUsername = document.getElementById('username').value;
-    const enteredPassword = document.getElementById('password').value;
-
-    const foundAccount = accounts.find(account => account.username === enteredUsername && account.password === enteredPassword);
-
-    if (foundAccount) {
-      handleSuccessfulLogin();
-    } else {
-      console.log("Login failed. Please check your credentials.");
-    }
-  }
-
-  function attemptSignUp() {
-    const signupUsername = document.getElementById('signup-username').value;
-    const signupPassword = document.getElementById('signup-password').value;
-
-    // Check if the username is already taken
-    const isUsernameTaken = accounts.some(account => account.username === signupUsername);
-
-    // Check if signupUsername or signupPassword is empty
-    if (!signupUsername.trim() || !signupPassword.trim()) {
-        const signupFeedback = document.getElementById('signup-feedback');
-        if (signupFeedback) {
-            signupFeedback.innerText = "Please fill out both username and password fields.";
-        }
-    } else if (isUsernameTaken) {
-        const signupFeedback = document.getElementById('signup-feedback');
-        if (signupFeedback) {
-            signupFeedback.innerText = "Username is already taken. Please choose a different one.";
-        }
-    } else {
-        // Add the new account to the array
-        accounts.push({ username: signupUsername, password: signupPassword });
-
-        // Clear the signup feedback
-        const signupFeedback = document.getElementById('signup-feedback');
-        if (signupFeedback) {
-            signupFeedback.innerText = "";
-        }
-
-        // Switch to the login form after successful signup
-        switchToLoginForm();
-    }
-}
-
-  function handleSuccessfulLogin() {
-    const loginOverlay = document.getElementById('login-overlay');
-    if (loginOverlay) {
-      loginOverlay.classList.add('success');
-      setTimeout(() => {
-        loginOverlay.remove();
-        alert("Login successfully!");
-        alert("Login successful! Welcome, " + document.getElementById('username').value + "!");
-      }, 1000); // Adjust the timeout duration as needed
-    }
-  }
-
-  function switchToSignUpForm() {
-    const loginForm = document.querySelector('.login-form');
-    const signupForm = document.querySelector('.signup-form');
-
-    if (loginForm && signupForm) {
-      loginForm.style.display = 'none';
-      signupForm.style.display = 'block';
-      
-      
-      
-        
-    }
-  }
-
-  function switchToLoginForm() {
-    const loginForm = document.querySelector('.login-form');
-    const signupForm = document.querySelector('.signup-form');
-
-    if (loginForm && signupForm) {
-      loginForm.style.display = 'block';
-      signupForm.style.display = 'none';
-        
-      
-    }
-  }
-
-
-
    
 
   </script>
-</body>
+</body>    
+
+
 </html>
