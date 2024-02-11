@@ -551,6 +551,7 @@ header .navbar {
     color: #e42f45;
     text-decoration:none;
     margin-left: -100px;
+    font-size: 15px;
    }
    
    .content section p{ 
@@ -559,7 +560,7 @@ header .navbar {
     color: rgb(17, 17, 17);
     text-decoration:none;
     flex-wrap:wrap;
-   font-size: 15px;
+   font-size: 10px;
    margin-left: -100px;
    
    }
