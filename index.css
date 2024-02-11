@@ -6,45 +6,152 @@
   box-sizing: border-box;
   font-family: 'Fira Sans', sans-serif;
     }
+    @media screen and (max-width: 620px)  {
+      
+  
+      .head1 .ul1 a{
+          
+          font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+          margin: 50px;
+          text-decoration: none;
+          color: rgb(236, 229, 236);
+          font-size: 20px;
+          display: flex;
+      }
+      .head1 .ul1 a:hover{
+        color: #44107a;
+      }
+      .head1{
+          margin-top: 30px;
+          margin-left: 75px;
+          max-height: 5%;
+          background-image: url(https://wallpapers.com/blog/wp-content/uploads/2023/06/Portable-modern-silver-computer-on-a-black-background.jpeg);
+          background-size: cover;
+          background-color: rgb(36, 34, 34);
+          padding: 15px;
+          text-align: center;
+          border-radius: 6px;
+          box-shadow: 5px 5px 5px;
+          transition: 0.8s;
+          background-repeat: no-repeat;
+          }
+  }
+       
+    
+    .footer {
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      color: rgb(255, 255, 255);
+      text-align: center;
+   }
+    .icon-bar {
+      position: fixed;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+    }
+    
+    .icon-bar a {
+      display: block;
+      text-align: center;
+      padding: 16px;
+      transition: all 0.3s ease;
+      color: white;
+      font-size: 20px;
+    }
+    
+    .icon-bar a:hover {
+      background-color: #000;
+    }
+    
+    .facebook {
+      background: #3b3a3a;
+      color: white;
+    }
+    
+    .twitter {
+      background: #55ACEE;
+      color: white;
+    }
+    
+    .google {
+      background: #bb6a0f;
+      color: white;
+    }
+    
+    .linkedin {
+      background: #007bb5;
+      color: white;
+    }
+    
+    .youtube {
+      background: #e20303;
+      color: white;
+    }
+    
+    .content {
+      margin-left: 75px;
+      font-size: 30px;
+    }   
 
 .content section {
-      background-color: #181717;
+      background-color: #1b1a1a;
       column-gap:40px; 
       columns:2;
       text-align: center;
       margin: 5px;
       padding: 50px;
       border: 3px 3px 3px 3px solid black;
+      box-shadow: 5px 5px 5px;
+      margin-bottom: 10px;
       
     }
 
 .content section a{
+ padding-left: 100px;
  color: #e42f45;
  text-decoration:none;
+ 
 }
 
 .content section p{ 
+ padding-left: 100px;
  font-family: sans-serif;
  margin:8px;
- color: white;
+ color: rgb(255, 255, 255);
  text-decoration:none;
  flex-wrap:wrap;
 font-size: 15px;
+margin-bottom: 60px;
 }
 
 .content section img {
-      border-radius: 10px 10px 10px 10px;
-      display: block;
+      
+      border-radius: 200px 10px 200px 10px;
+      display: flex;
       margin: 0 auto;
       border: 2px solid #000;
       box-shadow: 5px 4px 8px 5px rgba(26, 25, 25, 0.1);
-      max-width: 100%;
+      max-width: 80%;
       height: auto;
     }
+
+    .content section img:hover {
+      border-radius: 10px 10px 10px 10px;
+      margin: 0 auto;
+      border: 2px solid #000;
+      box-shadow: 5px 4px 8px 5px rgba(26, 25, 25, 0.1);
+      max-width: 110%;
+      height: auto;
+      transition: 0.5s;
+    }
+
 .content section h2 {
       color:#dc552c;
     text-transform: uppercase;
-    background-image: linear-gradient( -225deg, #f4f4f7 0%, #44107a 29%, #f20956 67%, #403f38 100% );
+    background-image: linear-gradient( -225deg, #3b3b49 0%, #1f1e20 29%, #0fe71a 67%, #403f38 100% );
     background-size: auto auto;
     background-clip: border-box;
     background-size: 200% auto;
@@ -77,7 +184,7 @@ text-transform: uppercase;
       
     }
 body {
-  background-color: #1e1c1c;
+  background-image: linear-gradient(to right, rgb(68, 46, 78) , rgb(46, 43, 43));
   margin: 15px;
 }
 
@@ -200,7 +307,7 @@ header .navbar {
 
 .hero-section {
   height: 100vh;
-  background-image: url(https://www.bhmpics.com/downloads/codes-Wallpapers/28.code-syntax-dark-minimal-4k-mr.jpg);
+  background-image: url(https://wallpapers.com/blog/wp-content/uploads/2023/06/Portable-modern-silver-computer-on-a-black-background.jpeg);
   background-position: center;
   background-size: cover;
   position: relative;
@@ -208,6 +315,7 @@ header .navbar {
   padding: 0 20px;
   align-items: center;
   box-shadow: 3px 3px 3px 3px;
+  margin-bottom: 25px;
 }
 
 .hero-section .content {
@@ -313,6 +421,10 @@ header .navbar {
 }
 
 @media screen and (max-width: 600px) {
+  body {
+    background-image: linear-gradient(to right, rgb(13, 13, 14) , rgb(46, 43, 43));
+    margin: 15px;
+  }
   header.show-mobile-menu::before {
     
   content: "";
@@ -329,33 +441,27 @@ header .navbar {
   .center1{
     display: none;
   }
-  header {
-    margin-top: 50px;
-    margin-left: -90px;
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    z-index: 1;
-  }
+ 
   
   header .navbar {
+  
     max-width: 1000px;
-    margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
   
   }
   .center{ 
+    display: none;
     width: 50%;
   }
   .navbar .menu-links {
+    display: none;
     margin-top: -20px;
     align-items: left;
     margin-bottom: 100px;
     background: none;
-    margin-left: -160px;
+    margin-left: -130px;
     transition: left 0.2s ease;
   }
 
@@ -373,7 +479,7 @@ header .navbar {
   .navbar .menu-links li a {
 
     color: #f3eaea;
-    font-size: 0.7rem;
+    font-size: 0.5rem;
   }
 
   .navbar .menu-links .join-btn a {
@@ -390,7 +496,10 @@ header .navbar {
   }
 
   .hero-section {
-  background-image:url("https://www.bhmpics.com/downloads/codes-Wallpapers/28.code-syntax-dark-minimal-4k-mr.jpg");
+   
+   max-height: 100%;
+   background-color: #1b1a1a;
+  background-image: none;
   background-position: center;
   background-size: cover;
   position: relative;
@@ -428,19 +537,31 @@ header .navbar {
   .hero-section .popular-tags {
     display: none;
   }
-
+   .content section {
+    background-color: #fdfcfc;
+    columns: 1;
+    text-align: center;
+    margin: 5px;
+    padding: 50px;
+    border: 3px 3px 3px 3px solid black;
+    
+    
+  }
   .content section a{
     color: #e42f45;
     text-decoration:none;
+    margin-left: -100px;
    }
    
    .content section p{ 
     font-family: sans-serif;
     margin:8px;
-    color: white;
+    color: rgb(17, 17, 17);
     text-decoration:none;
     flex-wrap:wrap;
    font-size: 15px;
+   margin-left: -100px;
+   
    }
    
    .content section img {
