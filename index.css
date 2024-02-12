@@ -6,6 +6,7 @@
   box-sizing: border-box;
   font-family: 'Fira Sans', sans-serif;
     }
+   
     @media screen and (max-width: 620px)  {
       
   
@@ -66,17 +67,17 @@
     }
     
     .facebook {
-      background: #3b3a3a;
+      background: #00008B;
       color: white;
     }
     
     .twitter {
-      background: #55ACEE;
+      background: #111111;
       color: white;
     }
     
     .google {
-      background: #bb6a0f;
+      background: #008000;
       color: white;
     }
     
