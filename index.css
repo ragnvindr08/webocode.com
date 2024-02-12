@@ -9,35 +9,7 @@
    
     @media screen and (max-width: 620px)  {
         /* Styles for the menu button */
-        .menu-button {
-            display: inline-block;
-            cursor: pointer;
-            padding: 10px;
-            background-color: #f9f9f9;
-            border: none;
-            border-radius: 4px;
-        }
-
-        .menu-button span {
-            display: block;
-            width: 30px;
-            height: 4px;
-            background-color: #333;
-            margin: 6px 0;
-            transition: transform 0.3s;
-        }
-
-        /* Styles for the menu */
-        #menu {
-            display: none;
-            position: absolute;
-            top: 50px;
-            left: 10px;
-            background-color: #f9f9f9;
-            border: 1px solid #ccc;
-            padding: 10px;
-        }
-  
+       
       .head1 .ul1 a{
           
           font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
