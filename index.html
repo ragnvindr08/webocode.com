@@ -28,7 +28,23 @@
       </ul>
   </div>
   </div>
-
+        <!-- Button to toggle the menu -->
+    <button id="menuButton" class="menu-button">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+    <div id="menu">
+        <ul>
+            <li><a href="">Admin</a></li>
+            <li><a href="#">Repository</a></li>
+            <li><a href="#">Navigation Menu</a></li>
+            <li><a href="#">AI</a></li>
+            <li><a href="#">Information</a></li>
+            <li><a href="#">Compiler</a></li>
+        </ul>
+    </div>
+    
     <nav class="navbar">
 
           <img src="title.png" alt="webocode" class="center">
@@ -308,8 +324,22 @@ function openCustomSizeWindow9() {
   window.open("compiler.html" ,"CustomSizeWindow", "width=" + width + ",height=" + height + ",left=" + left + ",top=" + top);
 
 }
+    // JavaScript to toggle the menu visibility
+        document.getElementById('menuButton').addEventListener('click', function() {
+            var menu = document.getElementById('menu');
+            if (menu.style.display === 'none' || menu.style.display === '') {
+                menu.style.display = 'block';
+                // Rotate the lines to form an X
+                document.querySelectorAll('.menu-button span')[0].style.transform = 'rotate(45deg)';
+                document.querySelectorAll('.menu-button span')[1].style.transform = 'rotate(-45deg)';
+            } else {
+                menu.style.display = 'none';
+                // Reset the rotation of the lines
+                document.querySelectorAll('.menu-button span')[0].style.transform = 'rotate(0deg)';
+                document.querySelectorAll('.menu-button span')[1].style.transform = 'rotate(0deg)';
+            }
+        });
    
-
   </script>
 </body>    
 
