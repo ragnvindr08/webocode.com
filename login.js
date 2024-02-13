@@ -21,7 +21,7 @@
 
                 if (user) {
                     // Redirect to another page after successful login
-                    window.location.href = "https://github.com/login";
+                    window.location.href = "file:///home/chronos/u-79c9f80cc306e4c5fb1b2e3030614b2f2b3eee9d/MyFiles/Downloads/online-python-compiler-main/index.html";
                 } else {
                     // For demonstration purposes, show an alert for incorrect credentials
                     alert("Invalid username or password. Please try again.");
